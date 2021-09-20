@@ -1,12 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Home from './Components/Home';
+import List from './Components/List';
 import reportWebVitals from './reportWebVitals';
+import BottomAppBar from './Components/Navbar';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+const Routing = () => {
+  return (
+    <Router>
+      <div>
+      <Switch>
+        <Route exact path="/" component={Home} />        
+        <Route path="/home" component={Home} />
+        <Route path="/list" component={List} />
+      </Switch>
+      <BottomAppBar />
+      </div>
+    </Router>
+  );
+};
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Routing />    
   </React.StrictMode>,
   document.getElementById('root')
 );

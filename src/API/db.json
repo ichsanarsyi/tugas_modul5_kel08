@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "name": "Iced Tea",
+      "ingredients": "1 bag Teh Celup, 2 sdt Gula, 50 ml air panas, 100 ml air dingin, Es batu",
+      "steps":"Siapkan teh celup kedalam mug, tambahkan gula pasir, tuang air panas, aduk sampai gula larut, tambahkan air dingin, aduk rata, tambahkan es batu",
+      "image": "https://i.postimg.cc/CLpZspYy/icedtea.png"
+    },
+    {
+      "name": "Steamed Cassava",
+      "ingredients": "1 kg singkong, air, 1 sdm gula pasir, 1 sdt garam",
+      "steps":"Kupas-cuci-potong singkong, masukkan singkong ke dalam dandang kukusan berisi air, masak hingga matang",
+      "image": "https://i.postimg.cc/fL33BwJs/steamedcassava.jpg"
+    },
+    {
+      "name": "Steamed Sweet Potato",
+      "ingredients": "1 kg ubi jalar, 2 liter air",
+      "steps":"cuci-potong ubi, masukkan ubi ke dalam dandang kukusan berisi air, masak hingga matang",
+      "image": " https://i.postimg.cc/tTLscLxx/steamedsweetpotato.jpg"
+    },
+    {
+      "name": "Fried Egg",
+      "ingredients": "1 telur, garam, lada bubuk, 5 sdm Minyak goreng",
+      "steps":"panaskan minyak dalam wajan, masukkan telur, beri garam dan lada, masak hingga matang",
+      "image": "https://i.postimg.cc/QdsThGng/friedegg.jpg"
+    },
+    {
+      "name": "Hardboiled Egg",
+      "ingredients": "telur yang sudah dibersihkan, Air secukupnya",
+      "steps":"rebus telur dalam air mendidih selama 2 menit, diamkan telur di dalam panci selama 10 menit, tiriskan telur",
+      "image": "https://i.postimg.cc/rpwRRGTK/hardboiledegg.jpg"
+    }
+  ]
+}
