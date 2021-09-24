@@ -62,19 +62,20 @@ export default class List extends Component {
                     justifyContent="center"
                     alignItems="strech"
                 >
-				<Modal
-					title="How to make"
-					centered
-					visible={this.state.visible}
-					onOk={() => this.setState({ visible: false })}
-					onCancel={() => this.setState({ visible: false })}
-					width={500}
-				>
-					<div style={{ textAlign: "center" }}>
-						<p style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Segoe UI' }}>{this.state.name}</p>
-						<p style={{ fontSize: 15, fontFamily: 'Segoe UI' }}>Steps:  {this.state.steps}</p>
-					</div>
-				</Modal>
+					<Modal
+						title="How to make"
+						centered
+						visible={this.state.visible}
+						onOk={() => this.setState({ visible: false })}
+						onCancel={() => this.setState({ visible: false })}
+						width={500}
+					>
+						<div style={{ textAlign: "center" }}>
+							<p style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Segoe UI' }}>{this.state.name}</p>
+							<p style={{ fontSize: 15, fontFamily: 'Segoe UI' }}>Steps:  {this.state.steps}</p>
+						</div>
+					</Modal>
+
 					{this.state.recipe.map((results, index) => {
 						return (
 							<Grid item key={results.name}>
