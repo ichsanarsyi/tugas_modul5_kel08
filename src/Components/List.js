@@ -7,8 +7,8 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import AppBar from "@material-ui/core/AppBar";
 import CardMedia from "@material-ui/core/CardMedia";
-// import Modal from '@mui/material/Modal';
-// import Box from '@mui/material/Box';
+import { Modal } from "antd";
+import "antd/dist/antd.css";
 
 export default class List extends Component {
     constructor(props) {
@@ -16,11 +16,16 @@ export default class List extends Component {
 		this.state = {
 			recipe: [],
 			visible: false,
+			show: false,
 		};
 	}
 	
-	handleButton = (steps) => {
-		alert("Steps : " + steps);
+	handleModal = (results) => {
+		this.setState({
+			visible: true,
+			name: results.name,
+			steps: results.steps,
+		});
 	};
 	
 	componentDidMount() {
@@ -57,11 +62,24 @@ export default class List extends Component {
                     justifyContent="center"
                     alignItems="strech"
                 >
+				<Modal
+					title="How to make"
+					centered
+					visible={this.state.visible}
+					onOk={() => this.setState({ visible: false })}
+					onCancel={() => this.setState({ visible: false })}
+					width={500}
+				>
+					<div style={{ textAlign: "center" }}>
+						<p style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Segoe UI' }}>{this.state.name}</p>
+						<p style={{ fontSize: 15, fontFamily: 'Segoe UI' }}>Steps:  {this.state.steps}</p>
+					</div>
+				</Modal>
 					{this.state.recipe.map((results, index) => {
 						return (
 							<Grid item key={results.name}>
 								<Card>
-									<CardActionArea onClick={() => this.handleButton(results.steps)}>
+									<CardActionArea className="button" onClick={() => this.handleModal(results)}>										
 										<CardContent style={{ backgroundColor: "#1d4699", textAlign: "center", color: "#ededed" }} >
                                             <div style={{ display:"flex", justifyContent:"center"}}>
                                                 <CardMedia
